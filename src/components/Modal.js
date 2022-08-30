@@ -1,5 +1,9 @@
-
 import { useState } from 'react'
+
+import { useAuthContext } from '../hooks/useAuthContext'
+import { db } from '../firebase/config'
+import { addDoc, collection } from 'firebase/firestore'
+
 import styles from './Modal.module.css'
 
 
@@ -8,15 +12,22 @@ export default function Modal({ setShowModal }) {
 	const [category, setCategory] = useState('')
 	const [quantity, setQuantity] = useState(0)
 	const [expiryDate, setExpiryDate] = useState('')
+	const { user } = useAuthContext()
 
 
-	const handleSubmit = () => {
+	const handleSubmit = async (e) => {
+		e.preventDefault()
 		setShowModal(false)
-		addDocument({
+
+		await addDoc(collection(db, 'items'), {
 			name,
 			category, 
 			quantity, 
-			expiryDate})
+			expiryDate,
+			uid: user.uid
+		})
+
+
 	}
 
 	return (
@@ -30,12 +41,13 @@ export default function Modal({ setShowModal }) {
 							type="text" 
 							onChange={(e) => setName(e.target.value)}
 							value={name}
+							required
 							/>
 					</label>
 					<label>
 						<span>Category:</span>
 						<select 
-							onChange={(e) => setCategory(e.target.value)}>
+							onChange={(e) => setCategory(e.target.value)} required>
 							<option value="fruits">Fruits</option>
 							<option value="vegetables">Vegetables</option>
 							<option value="dairy">Dairy</option>
@@ -54,6 +66,7 @@ export default function Modal({ setShowModal }) {
 							type="number" 
 							onChange={(e) => setQuantity(e.target.value)}
 							value={quantity}	
+							required
 						/>
 					</label>
 					<label>
@@ -62,10 +75,12 @@ export default function Modal({ setShowModal }) {
 							type="date" 
 							onChange={(e) => setExpiryDate(e.target.value)}
 							value={expiryDate}
+							required
 						/>
 					</label>
 					<div className={styles.button}>
-						<button>Add</button>
+						<button type='submit'>Add</button>
+						<button onClick={() => setShowModal(false)}>Cancel</button>
 					</div>
 				</form>
 

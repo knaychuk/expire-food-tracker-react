@@ -1,0 +1,29 @@
+.items li {
+	margin: 5px auto;
+  border: 1px solid #f2f2f2;
+	box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border-left: 4px solid var(--clr-primary);
+}
+
+.quantity {
+	color: #777;
+  font-size: 1.4em;
+}
+
+.name {
+	color: #777;
+  font-size: 1.4em;
+}
+
+.expiry {
+	margin-left: auto;
+  margin-right: 40px;
+  color: #777;
+  font-weight: bold;
+  font-size: 1.4em;
+}

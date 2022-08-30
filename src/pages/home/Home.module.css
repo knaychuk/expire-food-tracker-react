@@ -1,1 +1,25 @@
 
+.home {
+	left: 0;
+	top: 0;
+	width: 100%;
+
+	overflow: auto;
+
+}
+
+.content {
+	background-color: white;
+	margin: 100px auto;
+	border-radius: 10px;
+	max-width: 800px;
+
+	
+}
+
+.heading {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	
+}
