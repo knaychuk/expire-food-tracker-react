@@ -3,11 +3,6 @@
 	margin: 50px auto;
 }
 
-.login h2 {
-	font-weight: normal;
-	font-size: larger;
-}
-
 .login label {
 	display: block;
 	margin: 30px auto;
@@ -15,4 +10,6 @@
 
 .login input {
 	font-size: 1em;
+	padding: 5px;
 }
+

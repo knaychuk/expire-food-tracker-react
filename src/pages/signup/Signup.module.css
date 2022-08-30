@@ -3,11 +3,6 @@
 	margin: 50px auto;
 }
 
-.signup h2 {
-	font-weight: normal;
-	font-size: larger;
-}
-
 .signup label {
 	display: block;
 	margin: 30px auto;
@@ -15,4 +10,5 @@
 
 .signup input {
 	font-size: 1em;
+	padding: 5px;
 }

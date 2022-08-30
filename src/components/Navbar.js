@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, Navigate } from 'react-router-dom'
 import Logo from '../assets/logo.png'
 
 import { useAuthContext } from '../hooks/useAuthContext'
@@ -10,6 +10,7 @@ import styles from './Navbar.module.css'
 export default function Navbar() {
 	const { user } = useAuthContext()
 	const { logout } = useLogout()
+
 
 	return (
 		<div className={styles.navbar}>

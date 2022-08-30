@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 import { useAuthContext } from "./useAuthContext"
 
 import { auth } from "../firebase/config"
@@ -8,6 +9,7 @@ export const useLogout = () => {
 	const [error, setError] = useState(null)
 	const [isPending, setIsPending] = useState(false)
 	const { dispatch } = useAuthContext()
+	const navigate = useNavigate()
 
 	const logout = async () => {
 		setError(null)
@@ -17,13 +19,13 @@ export const useLogout = () => {
 			.then(() => {
 				setIsPending(true)
 				dispatch({ type: 'LOGOUT' })
-
 			})
 			.catch((err) => {
 				setIsPending(false)
 				setError(err.message)
 			})
-		
+
+		navigate('/login')
 		}
 
 
