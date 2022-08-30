@@ -1,12 +1,14 @@
 import { Link } from 'react-router-dom'
 import Logo from '../assets/logo.png'
 
+import { useAuthContext } from '../hooks/useAuthContext'
 import { useLogout } from '../hooks/useLogout'
 
 //styles
 import styles from './Navbar.module.css'
 
 export default function Navbar() {
+	const { user } = useAuthContext()
 	const { logout } = useLogout()
 
 	return (
@@ -14,13 +16,13 @@ export default function Navbar() {
 			<ul>
 				<Link className={styles.logo} to="/"><img  src={Logo} alt="Brand Logo" /></Link>
 
-				<li className={styles.link}><Link to="/">Home</Link></li>
+				{user && (<li className={styles.link}><Link to="/">Home</Link></li> )}
 				<li className={styles.link}><Link to="/about">About</Link></li>
 				<li><span className={styles.divider}></span></li>
-				<li className={styles.link}><Link to="/login">Login</Link></li>
-				<li className={styles.link}><Link to="/signup">Signup</Link></li>
+				{!user && (<li className={styles.link}><Link to="/login">Login</Link></li>)}
+				{!user && (<li className={styles.link}><Link to="/signup">Signup</Link></li>)}
 
-				<button onClick={logout}>Logout</button>
+				{user && (<button onClick={logout}>Logout</button>)}
 			</ul>
 
 		</div>
