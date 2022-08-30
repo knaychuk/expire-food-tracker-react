@@ -21,7 +21,6 @@ export const useSignup = () => {
 				updateProfile(res.user, {
 					displayName: username
 				})
-				console.log(res)
 			})
 			.catch((err) => {
 				setIsPending(false)

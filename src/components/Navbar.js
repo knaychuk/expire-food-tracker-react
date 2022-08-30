@@ -1,10 +1,14 @@
 import { Link } from 'react-router-dom'
 import Logo from '../assets/logo.png'
 
+import { useLogout } from '../hooks/useLogout'
+
 //styles
 import styles from './Navbar.module.css'
 
 export default function Navbar() {
+	const { logout } = useLogout()
+
 	return (
 		<div className={styles.navbar}>
 			<ul>
@@ -16,7 +20,7 @@ export default function Navbar() {
 				<li className={styles.link}><Link to="/login">Login</Link></li>
 				<li className={styles.link}><Link to="/signup">Signup</Link></li>
 
-				<button>Logout</button>
+				<button onClick={logout}>Logout</button>
 			</ul>
 
 		</div>
