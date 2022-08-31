@@ -17,7 +17,7 @@ export default function Navbar() {
 			<ul>
 				<Link className={styles.logo} to="/"><img  src={Logo} alt="Brand Logo" /></Link>
 
-				{user && (<li className={styles.link}><Link to="/">Home</Link></li> )}
+				{user && (<li className={styles.link}><Link to="/">My List</Link></li> )}
 				<li className={styles.link}><Link to="/about">About</Link></li>
 				<li><span className={styles.divider}></span></li>
 				{!user && (<li className={styles.link}><Link to="/login">Login</Link></li>)}

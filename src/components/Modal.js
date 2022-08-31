@@ -12,18 +12,23 @@ export default function Modal({ setShowModal }) {
 	const [category, setCategory] = useState('')
 	const [quantity, setQuantity] = useState(0)
 	const [expiryDate, setExpiryDate] = useState('')
+	const [days, setDays] = useState(0)
+
 	const { user } = useAuthContext()
 
+	
 
 	const handleSubmit = async (e) => {
 		e.preventDefault()
 		setShowModal(false)
+
 
 		await addDoc(collection(db, 'items'), {
 			name,
 			category, 
 			quantity, 
 			expiryDate,
+			days,
 			uid: user.uid
 		})
 
@@ -39,6 +44,7 @@ export default function Modal({ setShowModal }) {
 						<span>Item Name:</span>
 						<input 
 							type="text" 
+							placeholder='e.g Loaf of Bread'
 							onChange={(e) => setName(e.target.value)}
 							value={name}
 							required
@@ -48,6 +54,7 @@ export default function Modal({ setShowModal }) {
 						<span>Category:</span>
 						<select 
 							onChange={(e) => setCategory(e.target.value)} required>
+							<option disabled selected value> -- select an option -- </option>
 							<option value="fruits">Fruits</option>
 							<option value="vegetables">Vegetables</option>
 							<option value="dairy">Dairy</option>

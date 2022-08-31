@@ -11,13 +11,13 @@
 }
 
 .quantity {
-	color: #777;
-  font-size: 1.4em;
+	color: black;
+  font-size: 1.3em;
 }
 
 .name {
-	color: #777;
-  font-size: 1.4em;
+	color: var(--clr-primary);
+  font-size: 1.2em;
 }
 
 .expiry {
@@ -25,5 +25,25 @@
   margin-right: 40px;
   color: #777;
   font-weight: bold;
-  font-size: 1.4em;
+  font-size: 1.2em;
+}
+
+.items button {
+  position: absolute;
+  top: 0;
+  right:0;
+  background: #ddd;
+  color: #777;
+  border: none;
+	border-radius: 0%;
+  padding: 12px 8px;
+  text-align: center;
+  line-height: 0;
+  font-size: 0.9em;
+  cursor: pointer;
+}
+
+.items button:hover {
+	 background-color: var(--clr-primary);
+	 color: white;
 }
