@@ -1,0 +1,28 @@
+
+.container {
+	margin: 0 auto;
+	max-width: 90%;
+}
+
+.text {
+	margin-top: 50px;
+}
+
+.links {
+	display: flex;
+	justify-content: center;
+	margin: 20px;
+}
+
+.links a {
+	margin: 20px;
+	color: var(--clr-primary)
+}
+
+.links a:hover {
+	color: rgb(102, 27, 102);
+}
+
+.text span {
+	font-weight: bolder;
+}

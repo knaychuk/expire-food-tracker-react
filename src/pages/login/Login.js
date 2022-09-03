@@ -15,6 +15,7 @@ export default function Signup() {
 		login(email, password)
 	}
 
+
 	return (
 		<div>
 			<form onSubmit={handleSubmit} className={styles.login}>

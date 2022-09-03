@@ -24,7 +24,7 @@ export const useSignup = () => {
 			})
 			.catch((err) => {
 				setIsPending(false)
-				setError(err.message)
+				setError(err.code)
 			})
 		
 		}

@@ -21,7 +21,7 @@ export const useLogin = () => {
 			})
 			.catch((err) => {
 				setIsPending(false)
-				setError(err.message)
+				setError(err.code)
 			})
 		
 		}

@@ -16,7 +16,6 @@ export default function Modal({ setShowModal }) {
 
 	const { user } = useAuthContext()
 
-	
 
 	const handleSubmit = async (e) => {
 		e.preventDefault()
@@ -53,8 +52,8 @@ export default function Modal({ setShowModal }) {
 					<label>
 						<span>Category:</span>
 						<select 
-							onChange={(e) => setCategory(e.target.value)} required>
-							<option disabled selected value> -- select an option -- </option>
+							onChange={(e) => setCategory(e.target.value)} required defaultValue={'DEFAULT'}>
+							<option value="DEFAULT" disabled> -- select an option -- </option>
 							<option value="fruits">Fruits</option>
 							<option value="vegetables">Vegetables</option>
 							<option value="dairy">Dairy</option>
