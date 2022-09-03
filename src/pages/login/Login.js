@@ -1,5 +1,6 @@
-
 import { useState } from 'react'
+
+//hooks
 import { useLogin } from '../../hooks/useLogin'
 
 //styles
@@ -14,7 +15,6 @@ export default function Signup() {
 		e.preventDefault()
 		login(email, password)
 	}
-
 
 	return (
 		<div>
@@ -40,7 +40,6 @@ export default function Signup() {
 				{isPending && <button>Loading</button>}
 				{error && <p>{error}</p>}
 			</form>
-
 		</div>
 	)
 }

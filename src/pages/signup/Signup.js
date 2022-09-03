@@ -1,4 +1,6 @@
 import { useState } from 'react'
+
+//hooks
 import { useSignup } from '../../hooks/useSignup'
 
 //styles
@@ -47,7 +49,6 @@ export default function Signup() {
 				{isPending && <button>Loading</button>}
 				{error && <p>{error}</p>}
 			</form>
-
 		</div>
 	)
 }

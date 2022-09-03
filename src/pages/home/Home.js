@@ -1,16 +1,15 @@
-import { useEffect, useState } from 'react'
+import {useState } from 'react'
 
-import { useAuthContext } from '../../hooks/useAuthContext'
+//components
+import ItemList from '../../components/ItemList'
 import Modal from '../../components/Modal'
+
+//hooks
+import { useAuthContext } from '../../hooks/useAuthContext'
+import { useCollection } from '../../hooks/useCollection'
 
 //styles
 import styles from './Home.module.css'
-import { collection, getDocs } from 'firebase/firestore'
-import { db } from '../../firebase/config'
-import { useCollection } from '../../hooks/useCollection'
-import ItemList from '../../components/ItemList'
-
-
 
 export default function Home() {
 	const [showModal, setShowModal] = useState(false)
@@ -28,11 +27,8 @@ export default function Home() {
 	return (
 		<div className={styles.home}>
 			<div className={styles.content}>
-		
-				<div className={styles.heading}>
-					
-					<h1>{user.displayName}'s List</h1>
-					
+				<div className={styles.heading}>					
+					<h1>{user.displayName}'s List</h1>					
 					<button onClick={handleClick}>Add Item</button>
 				</div>
 				{documents && <ItemList items={documents}/>}

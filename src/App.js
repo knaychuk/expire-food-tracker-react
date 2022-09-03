@@ -1,12 +1,14 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom"
 
-import { useAuthContext } from "./hooks/useAuthContext"
-
+//components
 import Navbar from "./components/Navbar"
 import Home from "./pages/home/Home"
 import About from "./pages/about/About"
 import Login from "./pages/login/Login"
 import Signup from "./pages/signup/Signup"
+
+//hooks
+import { useAuthContext } from "./hooks/useAuthContext"
 
 function App() {
   const { authIsReady, user } = useAuthContext()
@@ -24,7 +26,6 @@ function App() {
         </Routes>
       </BrowserRouter> 
       )}
-
     </div>
   );
 }

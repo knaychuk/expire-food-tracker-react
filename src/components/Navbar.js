@@ -1,6 +1,9 @@
 import { Link, Navigate } from 'react-router-dom'
+
+//assets
 import Logo from '../assets/logo.png'
 
+//hooks
 import { useAuthContext } from '../hooks/useAuthContext'
 import { useLogout } from '../hooks/useLogout'
 

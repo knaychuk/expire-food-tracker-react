@@ -1,9 +1,11 @@
 import { useState } from "react"
+
+//hooks
 import { useAuthContext } from "./useAuthContext"
 
-
-import { signInWithEmailAndPassword } from "firebase/auth"
+//firebase
 import { auth } from "../firebase/config"
+import { signInWithEmailAndPassword } from "firebase/auth"
 
 export const useLogin = () => {
 	const [error, setError] = useState(null)
@@ -23,9 +25,7 @@ export const useLogin = () => {
 				setIsPending(false)
 				setError(err.code)
 			})
-		
 		}
-
 
 	return { error, isPending, login }
 }

@@ -1,9 +1,12 @@
 import { useState } from "react"
+
+//hooks
 import { useAuthContext } from "./useAuthContext"
 
+//firebase
+import { auth } from "../firebase/config"
 import { createUserWithEmailAndPassword } from "firebase/auth"
 import { updateProfile } from "firebase/auth"
-import { auth } from "../firebase/config"
 
 export const useSignup = () => {
 	const [error, setError] = useState(null)
@@ -28,7 +31,6 @@ export const useSignup = () => {
 			})
 		
 		}
-
 
 	return { error, isPending, signup }
 }

@@ -1,9 +1,13 @@
 import { useState } from 'react'
 
-import { useAuthContext } from '../hooks/useAuthContext'
+//firebase
 import { db } from '../firebase/config'
 import { addDoc, collection } from 'firebase/firestore'
 
+//hooks
+import { useAuthContext } from '../hooks/useAuthContext'
+
+//styles
 import styles from './Modal.module.css'
 
 

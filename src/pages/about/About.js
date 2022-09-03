@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom'
+
+//hooks
 import { useAuthContext } from '../../hooks/useAuthContext'
 
 //styles
@@ -24,8 +26,6 @@ export default function About() {
 				<span>Welcome to the Expire.</span> A quick and easy way to keep track of your groceries expiry dates. No more accidentally leaving food until it goes bad.
 				Click on 'My List' to begin tracking. You will find a list where you can add and delete items accordingly.
 				</div>
-			
-			
 			</>}
 		</div>
 	)
