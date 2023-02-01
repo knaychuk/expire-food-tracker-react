@@ -13,7 +13,7 @@ export default function About() {
 		<div className={styles.container}>
 			{!user && <>
 				<div className={styles.text}>
-				<span>Welcome to the Expire.</span> A quick and easy way to keep track of your groceries expiry dates. No more accidentally leaving food until it goes bad.
+				<span>Welcome to Expire.</span> A quick and easy way to keep track of your grocery expiry dates. No more accidentally leaving food until it goes bad.
 				Click login, signup, or the buttons below to begin tracking. Once logged in, you will find a list where you can add and delete items accordingly.
 				</div> 
 				<div className={styles.links}>
@@ -23,7 +23,7 @@ export default function About() {
 			</> }
 			{user && <>
 				<div className={styles.text}>
-				<span>Welcome to the Expire.</span> A quick and easy way to keep track of your groceries expiry dates. No more accidentally leaving food until it goes bad.
+				<span>Welcome to Expire.</span> A quick and easy way to keep track of your grocery expiry dates. No more accidentally leaving food until it goes bad.
 				Click on 'My List' to begin tracking. You will find a list where you can add and delete items accordingly.
 				</div>
 			</>}
