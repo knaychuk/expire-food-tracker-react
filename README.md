@@ -1,6 +1,25 @@
-# Getting Started with Create React App
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+# Expire
+
+## Introduction
+An app designed to help keep track of the food in your fridge. Made with React and hosted on Firebase.
+
+## Walkthrough
+
+### 1. Either signup on this page
+![signup page](./screenshots/expire-signup.png)
+
+### 2. OR login on this page
+![login page](./screenshots/expire-login.png)
+
+### 3. Once logged in, you can view your list of items
+![item list](./screenshots/expire-user-list.png)
+
+### 4. Add new items to the list 
+![add item](./screenshots/expire-add-item.png)
+
+# Getting Started with Create React App
 
 ## Available Scripts
 
