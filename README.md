@@ -1,5 +1,3 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 # Expire
 
 Using React & Firebase to create an app that allows you to keep track of the food in your fridge. The goal is the learn React and learn authorization/hosting.
@@ -7,6 +5,8 @@ Using React & Firebase to create an app that allows you to keep track of the foo
 ###### Project Date: Started August 2022
 
 ## Walkthrough
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ### 1. Either signup on this page
 ![signup page](./screenshots/expire-signup.png)
