@@ -2,8 +2,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Expire
 
-## Introduction
-An app designed to help keep track of the food in your fridge. Made with React and hosted on Firebase.
+Using React & Firebase to create an app that allows you to keep track of the food in your fridge. The goal is the learn React and learn authorization/hosting.
+
+###### Project Date: Started August 2022
 
 ## Walkthrough
 
